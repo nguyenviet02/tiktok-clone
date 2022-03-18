@@ -9,8 +9,8 @@ function MainContainer() {
   return (
     <div className={clsx(styles.mainContainer, "mainContainer")}>
       <Routes>
-        <Route path="/" element={<Navigate replace to="/foryou" />} />
-        <Route path="/foryou" element={<ForYou />} />
+        <Route path="/tiktok-clone" element={<Navigate replace to="/tiktok-clone/foryou" />} />
+        <Route path="/tiktok-clone/foryou" element={<ForYou />} />
         <Route path="/following" element={<Following />} />
       </Routes>
     </div>
