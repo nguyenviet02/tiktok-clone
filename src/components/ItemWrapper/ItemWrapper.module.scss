@@ -1,0 +1,8 @@
+@import "../variables/variables.scss";
+
+.itemWrapper {
+  width: 100%;
+  margin-top: 50px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid $button-color;
+}

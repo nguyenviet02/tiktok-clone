@@ -1,0 +1,48 @@
+@import "../variables/variables.scss";
+
+.searchBar {
+  width: 360px;
+  height: 45px;
+  background-color: $button-color;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputContainer {
+  width: fit-content;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 15px;
+  font-weight: 100;
+  width: 250px;
+  margin-right: 10px;
+}
+
+.iconTimesCircle {
+  color: #a7a7ab;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+.iconTimesCircleActive {
+  opacity: 1;
+}
+
+.searchBtn {
+  padding: 3px 10px;
+  border-left: 1px solid #a7a7ab;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.iconSearch {
+  font-size: 18px;
+}

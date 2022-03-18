@@ -1,0 +1,37 @@
+@import "../variables/variables.scss";
+
+.sideBarFooter {
+  width: 100%;
+  padding: 10px 0px;
+
+  p {
+    font-size: 13px;
+    font-weight: 600;
+    color: rgba(22, 24, 35, 0.7);
+  }
+}
+
+.social {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn {
+  padding: 5px 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 5px;
+  background-color: $secondary-color;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.btnCV {
+  margin: 10px 0px;
+  width: 100%;
+}

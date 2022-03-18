@@ -1,0 +1,90 @@
+@import "../variables/variables.scss";
+
+.headerRight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  ul {
+    min-width: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.uploadBtn {
+  font-size: 16px;
+  font-weight: 700;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.signInBtn {
+  margin: 0 20px;
+  padding: 8px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 5px;
+  background-color: $secondary-color;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+
+  &:hover {
+    background-color: #e71442;
+  }
+}
+
+.iconEllipsisV {
+  font-size: 18px;
+  width: 30px;
+}
+
+.menu {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  padding: 10px 0px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  pointer-events: none;
+
+  .btn {
+    width: 100%;
+    padding: 10px 15px;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    &:hover {
+      background-color: #f1e9e9;
+    }
+
+    .icon {
+      font-size: 18px;
+      width: 20px;
+    }
+
+    span {
+      margin-left: 8px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+  }
+}
+
+.menuActive {
+  opacity: 1;
+  pointer-events: all;
+}

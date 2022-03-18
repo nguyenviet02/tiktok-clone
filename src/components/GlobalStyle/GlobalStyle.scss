@@ -1,0 +1,24 @@
+@import "../variables/variables.scss";
+
+.d-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App {
+  margin: 0 200px;
+  height: calc(100vh - 60px);
+  margin-top: 60px;
+  color: $primary-text-color;
+  display: flex;
+  gap: 0px 90px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}

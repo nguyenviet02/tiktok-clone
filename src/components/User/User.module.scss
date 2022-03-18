@@ -1,0 +1,157 @@
+@import "../variables/variables.scss";
+
+.User {
+  width: 100%;
+  height: 48px;
+  padding: 0 7px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $button-color;
+  }
+}
+
+.UserImage {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 10px;
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.UserInfo {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+
+  .UserName {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .UserVerified {
+    color: #20d5ec;
+    margin-left: 5px;
+    display: none;
+  }
+  .UserVerifiedActive {
+    display: block;
+  }
+
+  .Name {
+    font-size: 12px;
+    font-weight: 600;
+    color: $secondary-text-color;
+  }
+}
+
+.UserCard {
+  position: absolute;
+  z-index: 10;
+  top: 100%;
+  left: 5px;
+  width: 90%;
+  height: 150px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: $background-color;
+  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.2s linear;
+  transition-delay: 0.2s;
+
+  .UserCardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+
+    img {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .btn {
+      padding: 8px 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      border-radius: 5px;
+      background-color: $secondary-color;
+      color: #fff;
+      font-size: 15px;
+      font-weight: 600;
+
+      &:hover {
+        background-color: #e71442;
+      }
+    }
+  }
+
+  .UserCardBody {
+    .UserCardUserName {
+      font-size: 18px;
+      font-weight: 800;
+      line-height: 1.4;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    .UserVerified {
+      color: #20d5ec;
+      margin-left: 5px;
+      display: none;
+    }
+    .UserVerifiedActive {
+      display: block;
+    }
+    .UserCardName {
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.2;
+    }
+  }
+
+  .UserCardStatus {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 17px;
+
+    p {
+      color: $secondary-text-color;
+      font-weight: 500;
+    }
+    span {
+      color: $primary-text-color;
+      font-weight: 700;
+    }
+  }
+}
+
+.User:hover {
+  .UserCard {
+    opacity: 1;
+    pointer-events: all;
+  }
+}

@@ -1,0 +1,27 @@
+@import "../variables/variables.scss";
+
+.sideBar {
+  width: 30%;
+  height: calc(100vh - 60px);
+  overflow-y: scroll;
+  align-items: stretch;
+  padding-bottom: 25px;
+
+  &:hover.sideBar::-webkit-scrollbar-thumb {
+    background: $button-color;
+  }
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 20px;
+  }
+}

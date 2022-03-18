@@ -1,0 +1,48 @@
+@import "../variables/variables.scss";
+
+.sideBarExplorer {
+  padding: 10px;
+  border-bottom: 2px solid $button-color;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 700;
+  color: rgba(22, 24, 35, 0.75);
+}
+
+.explorerContainer {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  max-width: 100%;
+  width: fit-content;
+  margin: 3px;
+  padding: 5px 10px;
+  background-color: $background-color;
+  border: 1px solid rgba(22, 24, 35, 0.4);
+  border-radius: 20px;
+  font-size: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .icon {
+    margin-right: 5px;
+  }
+
+  .content {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+    color: rgba(22, 24, 35, 0.7);
+  }
+}
