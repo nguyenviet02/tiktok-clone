@@ -2,30 +2,6 @@
 
 .mainContainer {
   width: 70%;
-  background-color: $background-color;
-  padding-right: 10px;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  align-items: stretch;
-
-  &:hover.mainContainer::-webkit-scrollbar-thumb {
-    background: rgb(197, 115, 115);
-  }
-  &:hover.mainContainer::-webkit-scrollbar-track {
-    background: $button-color;
-  }
-
-  &::-webkit-scrollbar {
-    width: 6px;
-  }
-
-  &::-webkit-scrollbar-track {
-    background: transparent;
-  }
-
-  /* Handle */
-  &::-webkit-scrollbar-thumb {
-    background: transparent;
-    border-radius: 20px;
-  }
+  height: calc(100vh - 60px);
+  overflow: hidden;
 }

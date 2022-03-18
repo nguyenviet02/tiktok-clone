@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import clsx from 'clsx';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -13,75 +13,56 @@ import styles from './VideoWrapper.module.scss';
 
 function VideoWrapper({ video }) {
   const [isPlaying, setIsPlaying] = useState();
+  const isInViewPort = useRef();
+  console.log(isPlaying);
 
   const handleToggle = (id) => {
+    const btnPlay = document.querySelector(`.icon-play-video-${id}`);
+    const btnPause = document.querySelector(`.icon-pause-video-${id}`);
+    const video = document.querySelector(`.video-${id}`);
     setIsPlaying(`video-${id}`);
     if (isPlaying === `video-${id}`) {
       setIsPlaying(null);
+      video.pause();
+      btnPlay.classList.remove("hide");
+      btnPause.classList.add("hide");
     }
     if (isPlaying !== `video-${id}`) {
       setIsPlaying(`video-${id}`);
+      video.play();
+      btnPlay.classList.add("hide");
+      btnPause.classList.remove("hide");
     }
   };
 
-  const isInViewPort = (ele) => {
+  isInViewPort.current = (ele, index) => {
+    const btnPlay = document.querySelector(`.icon-play-video-${index + 1}`);
+    const btnPause = document.querySelector(`.icon-pause-video-${index + 1}`);
     const rect = ele.getBoundingClientRect();
     const elemTop = rect.top;
-    const elemBottom = rect.bottom;
     const isVisible = elemTop + window.innerHeight / 4 < window.innerHeight && elemTop >= 60;
-    return isVisible;
+    if (isVisible) {
+      setIsPlaying(`video-${index + 1}`);
+      ele.querySelector("video").play();
+      btnPlay.classList.add("hide");
+      btnPause.classList.remove("hide");
+    }
+    else {
+      ele.querySelector("video").pause();
+      btnPlay.classList.remove("hide");
+      btnPause.classList.add("hide");
+    }
   }
 
   useEffect(() => {
-    console.log(window.innerHeight);
-    const mainContainer = document.querySelector(`.mainContainer`);
+    const ForYouContainer = document.querySelector(`.ForYouContainer`);
     const videos = document.querySelectorAll(`.videoWrapper`);
-    const btnPlay = document.querySelector(`.icon-play-video-${video.id + 1}`);
-    const btnPause = document.querySelector(`.icon-pause-video-${video.id + 1}`);
-    mainContainer.addEventListener('scroll', () => {
-      videos.forEach(video => {
-        if (isInViewPort(video)) {
-          video.querySelector("video").play();
-          btnPlay.classList.remove('hide');
-          btnPause.classList.add('hide');
-        }
-        else {
-          video.querySelector("video").pause();
-          btnPlay.classList.add('hide');
-          btnPause.classList.remove('hide');
-        }
+    ForYouContainer.addEventListener('scroll', () => {
+      videos.forEach((video, index) => {
+        isInViewPort.current(video, index);
       })
     })
-  }, [])
-
-  useEffect(() => {
-    const videos = document.querySelectorAll('video');
-    console.log(isPlaying);
-    videos.forEach((videoItem, index) => {
-      const btnPlay = document.querySelector(`.icon-play-video-${index + 1}`);
-      const btnPause = document.querySelector(`.icon-pause-video-${index + 1}`);
-      if (videoItem.classList.contains(isPlaying)) {
-        if (videoItem.paused) {
-          videoItem.play();
-          btnPlay.classList.add('hide');
-          btnPause.classList.remove('hide');
-        }
-        else {
-          videoItem.pause();
-          btnPlay.classList.add('hide');
-          btnPause.classList.remove('hide');
-        }
-      }
-      else {
-        videoItem.classList.remove('playing');
-        videoItem.pause();
-        btnPlay.classList.remove('hide');
-        btnPause.classList.add('hide');
-      }
-
-    });
-  }, [isPlaying]);
-
+  }, []);
 
   const handleVolume = (id, value) => {
     const video = document.querySelector(`.video-${id}`);
@@ -92,7 +73,7 @@ function VideoWrapper({ video }) {
     <div className={clsx(styles.videoWrapper, "videoWrapper")}>
       <div className={clsx(styles.video)}>
         <video
-          className={clsx(`video-${video.id}`, isPlaying === `video-${video.id}` ? "playing" : "", {
+          className={clsx(`video-${video.id}`, {
             [styles.horizontal]: video.horizontal,
           })}
           src={video.videoSrc}

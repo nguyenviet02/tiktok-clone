@@ -17,6 +17,8 @@ export { default as ItemWrapper } from './ItemWrapper/ItemWrapper';
 export { default as VideoHeader } from './VideoHeader/VideoHeader';
 export { default as VideoWrapper } from './VideoWrapper/VideoWrapper';
 
+export { default as ForYou } from './ForYou/ForYou';
+
 export { default as dtbUsers } from '../database/dtbUsers/dtbUsers';
 export { default as dtbExplorer } from '../database/dtbExplorer/dtbExplorer';
 export { default as dtbVideos } from '../database/dtbVideos/dtbVideos';
