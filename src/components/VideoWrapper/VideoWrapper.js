@@ -14,7 +14,6 @@ import styles from './VideoWrapper.module.scss';
 function VideoWrapper({ video }) {
   const [isPlaying, setIsPlaying] = useState();
   const isInViewPort = useRef();
-  console.log(isPlaying);
 
   const handleToggle = (id) => {
     const btnPlay = document.querySelector(`.icon-play-video-${id}`);
@@ -40,7 +39,7 @@ function VideoWrapper({ video }) {
     const btnPause = document.querySelector(`.icon-pause-video-${index + 1}`);
     const rect = ele.getBoundingClientRect();
     const elemTop = rect.top;
-    const isVisible = elemTop + window.innerHeight / 4 < window.innerHeight && elemTop >= 60;
+    const isVisible = elemTop + window.innerHeight / 3 < window.innerHeight && elemTop >= 0;
     if (isVisible) {
       setIsPlaying(`video-${index + 1}`);
       ele.querySelector("video").play();
@@ -85,10 +84,10 @@ function VideoWrapper({ video }) {
             className={clsx(styles.btnToggle)}
             onClick={() => { handleToggle(video.id) }}
           >
-            <div className={clsx(`icon-play-video-${video.id}`, "hide")}>
+            <div className={clsx(`icon-play-video-${video.id}`)}>
               <FontAwesomeIcon icon={faPlay} />
             </div>
-            <div className={clsx(`icon-pause-video-${video.id}`)}>
+            <div className={clsx(`icon-pause-video-${video.id}`, "hide")}>
               <FontAwesomeIcon icon={faPause} />
             </div>
 

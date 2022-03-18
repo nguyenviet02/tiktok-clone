@@ -1,4 +1,6 @@
 import clsx from 'clsx';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHouseChimney } from '@fortawesome/free-solid-svg-icons';
 import { faUserGroup } from '@fortawesome/free-solid-svg-icons';
@@ -7,20 +9,47 @@ import { faVideo } from '@fortawesome/free-solid-svg-icons';
 import styles from './SideBarNav.module.scss';
 
 function SideBarNav() {
+
+  const [active, setActive] = useState("foryou");
   return (
     <div className={clsx(styles.sideBarNav)}>
-      <button className={clsx(styles.btn)}>
-        <FontAwesomeIcon icon={faHouseChimney} className={clsx(styles.icon)}/>
-        <span>Dành cho bạn</span>
-      </button>
-      <button className={clsx(styles.btn)}>
-        <FontAwesomeIcon icon={faUserGroup} className={clsx(styles.icon)}/>
-        <span>Đang Follow</span>
-      </button>
-      <button className={clsx(styles.btn)}>
-        <FontAwesomeIcon icon={faVideo} className={clsx(styles.icon)}/>
-        <span>LIVE</span>
-      </button>
+
+      <Link to="/foryou" className={clsx(styles.link)}>
+        <button
+          className={clsx(styles.btn, {
+            [styles.active]: active === "foryou"
+          })}
+          onClick={() => setActive("foryou")}
+        >
+          <FontAwesomeIcon icon={faHouseChimney} className={clsx(styles.icon)} />
+          <span>Dành cho bạn</span>
+        </button>
+      </Link>
+
+      <Link to="/following" className={clsx(styles.link)}>
+        <button
+          className={clsx(styles.btn, {
+            [styles.active]: active === "following"
+          })}
+          onClick={() => setActive("following")}
+        >
+          <FontAwesomeIcon icon={faUserGroup} className={clsx(styles.icon)} />
+          <span>Đang Follow</span>
+        </button>
+      </Link>
+
+      <Link to="/live" className={clsx(styles.link)}>
+        <button
+          className={clsx(styles.btn, {
+            [styles.active]: active === "live"
+          })}
+          onClick={() => setActive("live")}
+        >
+          <FontAwesomeIcon icon={faVideo} className={clsx(styles.icon)} />
+          <span>LIVE</span>
+        </button>
+      </Link>
+
     </div>
   )
 };
