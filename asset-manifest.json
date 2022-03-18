@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/tiktok-clone/static/css/main.50196d2d.css",
-    "main.js": "/tiktok-clone/static/js/main.b71b4681.js",
+    "main.css": "/tiktok-clone/static/css/main.3848a8f2.css",
+    "main.js": "/tiktok-clone/static/js/main.eb30800a.js",
     "static/js/787.fe00223f.chunk.js": "/tiktok-clone/static/js/787.fe00223f.chunk.js",
     "static/media/menust_video1.mp4": "/tiktok-clone/static/media/menust_video1.b29a828d6e2914de36ad.mp4",
     "static/media/googlemapfun_video1.mp4": "/tiktok-clone/static/media/googlemapfun_video1.b569d05f83db55ddee02.mp4",
@@ -9,12 +9,12 @@
     "static/media/annguyenj444_video1.mp4": "/tiktok-clone/static/media/annguyenj444_video1.63a6793dac032a1530b2.mp4",
     "static/media/ndc_8888_video1.mp4": "/tiktok-clone/static/media/ndc_8888_video1.f580c13fb68df628bfb7.mp4",
     "index.html": "/tiktok-clone/index.html",
-    "main.50196d2d.css.map": "/tiktok-clone/static/css/main.50196d2d.css.map",
-    "main.b71b4681.js.map": "/tiktok-clone/static/js/main.b71b4681.js.map",
+    "main.3848a8f2.css.map": "/tiktok-clone/static/css/main.3848a8f2.css.map",
+    "main.eb30800a.js.map": "/tiktok-clone/static/js/main.eb30800a.js.map",
     "787.fe00223f.chunk.js.map": "/tiktok-clone/static/js/787.fe00223f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.50196d2d.css",
-    "static/js/main.b71b4681.js"
+    "static/css/main.3848a8f2.css",
+    "static/js/main.eb30800a.js"
   ]
 }
