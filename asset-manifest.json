@@ -1,20 +1,27 @@
 {
   "files": {
-    "main.css": "/tiktok-clone/static/css/main.b94fd141.css",
-    "main.js": "/tiktok-clone/static/js/main.a065577d.js",
+    "main.css": "/tiktok-clone/static/css/main.75763186.css",
+    "main.js": "/tiktok-clone/static/js/main.f397c001.js",
     "static/js/787.fe00223f.chunk.js": "/tiktok-clone/static/js/787.fe00223f.chunk.js",
+    "static/media/datdo0803_video1.mp4": "/tiktok-clone/static/media/datdo0803_video1.18b48ed2c399f55221b7.mp4",
+    "static/media/tiin.vn_video1.mp4": "/tiktok-clone/static/media/tiin.vn_video1.4d986d7f9a7a392d103d.mp4",
+    "static/media/cciinnn_video1.mp4": "/tiktok-clone/static/media/cciinnn_video1.7c2dc20e1f738fd7b62f.mp4",
+    "static/media/vtv24news_video1.mp4": "/tiktok-clone/static/media/vtv24news_video1.12d91bf3ce13a9958fb3.mp4",
     "static/media/menust_video1.mp4": "/tiktok-clone/static/media/menust_video1.b29a828d6e2914de36ad.mp4",
+    "static/media/caocuongvu_video1.mp4": "/tiktok-clone/static/media/caocuongvu_video1.792d98191b435258fe2d.mp4",
     "static/media/googlemapfun_video1.mp4": "/tiktok-clone/static/media/googlemapfun_video1.b569d05f83db55ddee02.mp4",
+    "static/media/sinhanh.hair_video1.mp4": "/tiktok-clone/static/media/sinhanh.hair_video1.77be0b6f9dd1a41b687a.mp4",
+    "static/media/hoaa.hanassii_video1.mp4": "/tiktok-clone/static/media/hoaa.hanassii_video1.d2973c6e28ab9defce48.mp4",
+    "static/media/ndc_8888_video1.mp4": "/tiktok-clone/static/media/ndc_8888_video1.a5d7286a24871778c3ef.mp4",
     "static/media/_tusya_kiskis_video1.mp4": "/tiktok-clone/static/media/_tusya_kiskis_video1.9508e0fef7a7d4f23f35.mp4",
     "static/media/annguyenj444_video1.mp4": "/tiktok-clone/static/media/annguyenj444_video1.63a6793dac032a1530b2.mp4",
-    "static/media/ndc_8888_video1.mp4": "/tiktok-clone/static/media/ndc_8888_video1.f580c13fb68df628bfb7.mp4",
     "index.html": "/tiktok-clone/index.html",
-    "main.b94fd141.css.map": "/tiktok-clone/static/css/main.b94fd141.css.map",
-    "main.a065577d.js.map": "/tiktok-clone/static/js/main.a065577d.js.map",
+    "main.75763186.css.map": "/tiktok-clone/static/css/main.75763186.css.map",
+    "main.f397c001.js.map": "/tiktok-clone/static/js/main.f397c001.js.map",
     "787.fe00223f.chunk.js.map": "/tiktok-clone/static/js/787.fe00223f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b94fd141.css",
-    "static/js/main.a065577d.js"
+    "static/css/main.75763186.css",
+    "static/js/main.f397c001.js"
   ]
 }
