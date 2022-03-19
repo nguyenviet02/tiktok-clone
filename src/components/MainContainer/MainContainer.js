@@ -4,14 +4,16 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import styles from './MainContainer.module.scss';
 import { ForYou } from '../index';
 import { Following } from '../index';
+import { Live } from '../index';
 
 function MainContainer() {
   return (
     <div className={clsx(styles.mainContainer, "mainContainer")}>
       <Routes>
-        <Route path="/tiktok-clone" element={<Navigate replace to="/tiktok-clone/foryou" />} />
-        <Route path="/tiktok-clone/foryou" element={<ForYou />} />
-        <Route path="/following" element={<Following />} />
+        <Route exact path="/tiktok-clone" element={<Navigate replace to="/tiktok-clone/foryou" />} />
+        <Route exact path="/tiktok-clone/foryou" element={<ForYou />} />
+        <Route exact path="/following" element={<Following />} />
+        <Route exact path="/live" element={<Live />} />
       </Routes>
     </div>
   )

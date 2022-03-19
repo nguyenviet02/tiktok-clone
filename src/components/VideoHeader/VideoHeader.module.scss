@@ -7,8 +7,14 @@
   align-items: flex-start;
 }
 
+.UserVerified {
+  color: $tick-color;
+  margin-left: 5px;
+}
+
 .mainHeader {
   margin-top: 10px;
+  max-width: 100%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -18,8 +24,9 @@
     height: 55px;
     border-radius: 50%;
     margin-right: 10px;
-    z-index: 1000;
+    z-index: 10;
     position: relative;
+    flex-shrink: 0;
 
     &:hover {
       .UserCard {
@@ -41,6 +48,7 @@
     align-items: flex-start;
     justify-content: flex-start;
     flex-direction: column;
+    word-wrap: break-word;
 
     .userName {
       span {
@@ -60,6 +68,8 @@
       vertical-align: middle;
       letter-spacing: 0.4px;
       font-weight: 500;
+      word-wrap: break-word;
+      flex: 1;
     }
 
     .music {
@@ -142,14 +152,6 @@
       display: flex;
       justify-content: flex-start;
       align-items: center;
-    }
-    .UserVerified {
-      color: #20d5ec;
-      margin-left: 5px;
-      display: none;
-    }
-    .UserVerifiedActive {
-      display: block;
     }
     .UserCardName {
       font-size: 15px;

@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHouseChimney } from '@fortawesome/free-solid-svg-icons';
@@ -11,6 +11,18 @@ import styles from './SideBarNav.module.scss';
 function SideBarNav() {
 
   const [active, setActive] = useState("foryou");
+  const url = window.location.href;
+  useEffect(() => {
+    if (url.includes("foryou")) {
+      setActive("foryou");
+    }
+    else if (url.includes("following")) {
+      setActive("following");
+    }
+    else if (url.includes("live")) {
+      setActive("live");
+    }
+  }, [url]);
   return (
     <div className={clsx(styles.sideBarNav)}>
 

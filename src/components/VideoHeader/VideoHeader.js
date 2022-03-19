@@ -7,6 +7,7 @@ import styles from './VideoHeader.module.scss';
 
 
 function VideoHeader({ user, video }) {
+  console.log(user);
   return (
     <div className={clsx(styles.videoHeader)}>
 
@@ -26,9 +27,7 @@ function VideoHeader({ user, video }) {
 
               <div className={clsx(styles.UserCardUserName)}>
                 <span>{user.username}</span>
-                <FontAwesomeIcon icon={faCircleCheck} className={clsx(styles.UserVerified, {
-                  [styles.UserVerifiedActive]: user.verified,
-                })} />
+                {user.verified === true ? <FontAwesomeIcon icon={faCircleCheck} className={clsx(styles.UserVerified)} /> : null}
               </div>
 
               <div className={clsx(styles.UserCardName)}>
@@ -48,6 +47,7 @@ function VideoHeader({ user, video }) {
         <div className={clsx(styles.info)}>
           <div className={clsx(styles.userName)}>
             <span>{user.username}</span>
+            {user.verified === true ? <FontAwesomeIcon icon={faCircleCheck} className={clsx(styles.UserVerified)} /> : null}
           </div>
           <div className={clsx(styles.description)}>
             <span>{video.cap}</span>

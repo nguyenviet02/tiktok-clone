@@ -20,7 +20,10 @@ export { default as VideoHeader } from './VideoHeader/VideoHeader';
 export { default as VideoWrapper } from './VideoWrapper/VideoWrapper';
 
 export { default as Following } from './Following/Following';
+export { default as FollowingCard } from './FollowingCard/FollowingCard';
 
+export { default as Live } from './Live/Live';
+export { default as LivePlayer } from './LivePlayer/LivePlayer';
 
 export { default as dtbUsers } from '../database/dtbUsers/dtbUsers';
 export { default as dtbExplorer } from '../database/dtbExplorer/dtbExplorer';

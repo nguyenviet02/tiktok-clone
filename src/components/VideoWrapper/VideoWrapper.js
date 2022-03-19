@@ -12,7 +12,7 @@ import { faVolumeHigh } from '@fortawesome/free-solid-svg-icons';
 import styles from './VideoWrapper.module.scss';
 
 function VideoWrapper({ video }) {
-  const [isPlaying, setIsPlaying] = useState();
+  const [isPlaying, setIsPlaying] = useState("video-1");
   const isInViewPort = useRef();
 
   const handleToggle = (id) => {

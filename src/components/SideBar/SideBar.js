@@ -10,7 +10,7 @@ import { SideBarFooter } from '../index';
 function SideBar() {
   console.log("render");
   return (
-    <div className={clsx(styles.sideBar)}>
+    <div className={clsx(styles.sideBar, "sideBar")}>
       <SideBarNav />
       <SideBarLogin />
       <SideBarUsers />

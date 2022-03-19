@@ -8,6 +8,7 @@
   overflow-x: hidden;
   overflow-y: scroll;
   align-items: stretch;
+  padding-left: 90px;
 
   &:hover.ForYouContainer::-webkit-scrollbar-thumb {
     background: rgb(197, 115, 115);

@@ -6,7 +6,7 @@ import { HeaderRight } from '../index';
 
 function Header() {
   return (
-    <div className={clsx(styles.header)}>
+    <div className={clsx(styles.header, "header")}>
       <div className={styles.headerLogo}>
         <img src={require('./images/logo.png')} alt="" />
       </div>
