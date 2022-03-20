@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/tiktok-clone/static/css/main.75763186.css",
-    "main.js": "/tiktok-clone/static/js/main.f397c001.js",
+    "main.css": "/tiktok-clone/static/css/main.67dfb60f.css",
+    "main.js": "/tiktok-clone/static/js/main.4f7209e6.js",
     "static/js/787.fe00223f.chunk.js": "/tiktok-clone/static/js/787.fe00223f.chunk.js",
     "static/media/datdo0803_video1.mp4": "/tiktok-clone/static/media/datdo0803_video1.18b48ed2c399f55221b7.mp4",
     "static/media/tiin.vn_video1.mp4": "/tiktok-clone/static/media/tiin.vn_video1.4d986d7f9a7a392d103d.mp4",
@@ -16,12 +16,12 @@
     "static/media/_tusya_kiskis_video1.mp4": "/tiktok-clone/static/media/_tusya_kiskis_video1.9508e0fef7a7d4f23f35.mp4",
     "static/media/annguyenj444_video1.mp4": "/tiktok-clone/static/media/annguyenj444_video1.63a6793dac032a1530b2.mp4",
     "index.html": "/tiktok-clone/index.html",
-    "main.75763186.css.map": "/tiktok-clone/static/css/main.75763186.css.map",
-    "main.f397c001.js.map": "/tiktok-clone/static/js/main.f397c001.js.map",
+    "main.67dfb60f.css.map": "/tiktok-clone/static/css/main.67dfb60f.css.map",
+    "main.4f7209e6.js.map": "/tiktok-clone/static/js/main.4f7209e6.js.map",
     "787.fe00223f.chunk.js.map": "/tiktok-clone/static/js/787.fe00223f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.75763186.css",
-    "static/js/main.f397c001.js"
+    "static/css/main.67dfb60f.css",
+    "static/js/main.4f7209e6.js"
   ]
 }
