@@ -13,7 +13,15 @@ import styles from './VideoWrapper.module.scss';
 
 function VideoWrapper({ video }) {
   const [isPlaying, setIsPlaying] = useState("video-1");
+  const [isLiked, setIsLiked] = useState(false);
   const isInViewPort = useRef();
+  const heartRef = useRef();
+
+  useEffect(() => {
+    heartRef.current.addEventListener('click', () => {
+      setIsLiked(!isLiked);
+    })
+  }, [isLiked]);
 
   useEffect(() => {
     const video = document.querySelector(`.${isPlaying}`);
@@ -120,8 +128,11 @@ function VideoWrapper({ video }) {
       </div>
 
       <div className={clsx(styles.actions)}>
-        <div className={clsx(styles.hearts)}>
-          <button className={clsx(styles.btn)}>
+        <div className={clsx(styles.hearts)} ref={heartRef}>
+          <button
+            className={clsx(styles.btn)}
+            style={isLiked ? { color: "red" } : {}}
+          >
             <FontAwesomeIcon icon={faHeart} />
           </button>
           <span>{video.hearts}</span>

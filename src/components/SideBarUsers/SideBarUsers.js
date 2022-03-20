@@ -1,22 +1,25 @@
 import clsx from 'clsx';
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useContext } from 'react';
 
 import styles from './SideBarUsers.module.scss';
+import { DtbContext } from '../index';
 import { User } from '../index';
-import { dtbUsers } from '../index';
 
 function SideBarUsers() {
+  const [dtbUsers, dtbVideos] = useContext(DtbContext);
   const [btnText, setBtnText] = useState("Xem tất cả");
   const btnRef = useRef();
   const handleClick = useRef();
-  const newDtbUsers = useRef(dtbUsers.slice(0, 5));
+  // const newDtbUsers = useRef(dtbUsers.slice(0, 5));
+  const [newDtbUsers, setNewDtbUsers] = useState(dtbUsers.slice(0, 5));
+
   handleClick.current = () => {
     if (btnText === "Xem tất cả") {
-      newDtbUsers.current = dtbUsers;
+      setNewDtbUsers(dtbUsers);
       setBtnText("Thu gọn");
     }
     else {
-      newDtbUsers.current = dtbUsers.slice(0, 5);
+      setNewDtbUsers(dtbUsers.slice(0, 5));
       setBtnText("Xem tất cả");
     }
   }
@@ -27,15 +30,10 @@ function SideBarUsers() {
       </span>
       <div className={clsx(styles.UsersContainer)}>
         {
-          newDtbUsers.current.map(user => (
+          newDtbUsers.map(user => (
             <User
               key={user.id}
-              image={user.avatar}
-              username={user.username}
-              name={user.name}
-              verified={user.verified}
-              followers={user.followers}
-              likes={user.likes}
+              userId={user.id}
             />
           ))
         }

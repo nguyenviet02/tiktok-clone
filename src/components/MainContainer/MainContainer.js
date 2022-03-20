@@ -10,7 +10,6 @@ function MainContainer() {
   return (
     <div className={clsx(styles.mainContainer, "mainContainer")}>
       <Routes>
-        {/* <Route exact path="/" element={<ForYou />} /> */}
         <Route exact path="/" element={< Navigate replace to="/foryou" />} />
         <Route exact path="/foryou" element={<ForYou />} />
         <Route exact path="/following" element={<Following />} />

@@ -8,7 +8,6 @@ import { SideBarExplorer } from '../index';
 import { SideBarFooter } from '../index';
 
 function SideBar() {
-  console.log("render");
   return (
     <div className={clsx(styles.sideBar, "sideBar")}>
       <SideBarNav />

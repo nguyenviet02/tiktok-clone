@@ -5,12 +5,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { GlobalStyle } from './components';
+import { DtbProvider } from './components';
 
 ReactDOM.render(
   <React.StrictMode>
     <GlobalStyle>
       <HashRouter>
-        <App />
+        <DtbProvider>
+          <App />
+        </DtbProvider>
       </HashRouter>
     </GlobalStyle>
   </React.StrictMode>,

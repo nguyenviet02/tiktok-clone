@@ -3,9 +3,10 @@ import clsx from 'clsx';
 import styles from './Following.module.scss';
 import { FollowingCard } from '../index';
 
-import { dtbUsers } from '../index';
+import { useDtb } from '../index';
 
 function Following() {
+  const [dtbUsers,] = useDtb();
   return (
     <div className={clsx(styles.followingContainer)}>
       {

@@ -1,18 +1,20 @@
 import clsx from 'clsx';
-import { useState } from 'react';
+
+import { useDtb } from '../index';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleCheck } from '@fortawesome/free-solid-svg-icons';
 
 import styles from './User.module.scss';
 
-function User({ image, username, name, verified, followers, likes }) {
-
+function User({ userId }) {
+  const [dtbUsers,] = useDtb();
+  const { avatar, username, name, verified, followers, likes } = dtbUsers[userId - 1];
   return (
     <div className={clsx(styles.User)}>
 
       <div className={clsx(styles.UserImage)}>
-        <img src={image} alt={name} />
+        <img src={avatar} alt={name} />
       </div>
 
       <div className={clsx(styles.UserInfo)}>
@@ -30,7 +32,7 @@ function User({ image, username, name, verified, followers, likes }) {
       <div className={clsx(styles.UserCard)}>
 
         <div className={clsx(styles.UserCardHeader)}>
-          <img src={image} alt={name} />
+          <img src={avatar} alt={name} />
           <button className={clsx(styles.btn)}>Follow</button>
         </div>
 

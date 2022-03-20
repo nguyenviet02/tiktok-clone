@@ -1,4 +1,9 @@
 export { default as GlobalStyle } from './GlobalStyle/GlobalStyle';
+export { default as useDtb } from './useDtb/useDtb';
+export { default as useViewPort } from './useViewPort/useViewPort';
+
+export { default as DtbContext } from './DtbContext/DtbContext';
+export { default as DtbProvider } from './DtbProvider/DtbProvider';
 
 export { default as Header } from './Header/Header';
 export { default as SearchBar } from './SearchBar/SearchBar';
