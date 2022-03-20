@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
@@ -9,9 +9,9 @@ import { GlobalStyle } from './components';
 ReactDOM.render(
   <React.StrictMode>
     <GlobalStyle>
-      <BrowserRouter>
+      <HashRouter>
         <App />
-      </BrowserRouter>
+      </HashRouter>
     </GlobalStyle>
   </React.StrictMode>,
   document.getElementById('root')
