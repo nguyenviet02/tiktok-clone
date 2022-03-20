@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from 'react';
 
 import styles from './Live.module.scss';
 import { LivePlayer } from '../index';
+import { LiveRecommend } from '../index';
 
 function Live() {
   useEffect(() => {
@@ -12,6 +13,7 @@ function Live() {
   return (
     <div className={clsx(styles.live)}>
       <LivePlayer />
+      <LiveRecommend />
     </div>
   )
 };

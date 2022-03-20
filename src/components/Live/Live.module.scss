@@ -4,4 +4,26 @@
   width: 100%;
   height: 100%;
   padding: 10px 10px 20px 5px;
+  overflow-y: scroll;
+
+  &:hover.live::-webkit-scrollbar-thumb {
+    background: rgb(197, 115, 115);
+  }
+  &:hover.live::-webkit-scrollbar-track {
+    background: $button-color;
+  }
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 20px;
+  }
 }

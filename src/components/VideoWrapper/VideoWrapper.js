@@ -15,6 +15,17 @@ function VideoWrapper({ video }) {
   const [isPlaying, setIsPlaying] = useState("video-1");
   const isInViewPort = useRef();
 
+  useEffect(() => {
+    const video = document.querySelector(`.${isPlaying}`);
+    const btnPlay = document.querySelector(`.icon-play-video-1`);
+    const btnPause = document.querySelector(`.icon-pause-video-1`);
+    if (video.played) {
+      btnPlay.classList.add("hide");
+      btnPause.classList.remove("hide");
+    }
+    video.play();
+  }, []);
+
   const handleToggle = (id) => {
     const btnPlay = document.querySelector(`.icon-play-video-${id}`);
     const btnPause = document.querySelector(`.icon-pause-video-${id}`);

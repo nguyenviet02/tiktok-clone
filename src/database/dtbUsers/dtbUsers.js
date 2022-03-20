@@ -8,6 +8,11 @@ const dtbUsers = [
     verified: true,
     followers: "3.1M",
     likes: "9M",
+    isLive: false,
+    live: {
+      title: "Hello World !",
+      viewers: 123,
+    }
   },
   {
     id: 2,
@@ -18,6 +23,11 @@ const dtbUsers = [
     verified: true,
     followers: "4.2M",
     likes: "10.6M",
+    isLive: true,
+    live: {
+      title: "Lên Live 20/03",
+      viewers: 223,
+    }
   },
   {
     id: 3,
@@ -28,6 +38,11 @@ const dtbUsers = [
     verified: true,
     followers: "2.2M",
     likes: "7.9M",
+    isLive: true,
+    live: {
+      title: "Live tâm sự...",
+      viewers: 421,
+    }
   },
   {
     id: 4,
@@ -38,6 +53,11 @@ const dtbUsers = [
     verified: false,
     followers: "1.2M",
     likes: "6.2M",
+    isLive: false,
+    live: {
+      title: "Hello World !",
+      viewers: 123,
+    }
   },
   {
     id: 5,
@@ -48,6 +68,11 @@ const dtbUsers = [
     verified: true,
     followers: "3.4M",
     likes: "12.2M",
+    isLive: true,
+    live: {
+      title: "Xin chào mọi người ",
+      viewers: 2204,
+    }
   },
   {
     id: 6,
@@ -58,6 +83,11 @@ const dtbUsers = [
     verified: false,
     followers: "1.8M",
     likes: "2.5M",
+    isLive: false,
+    live: {
+      title: "Hello World !",
+      viewers: 123,
+    }
   },
   {
     id: 7,
@@ -68,6 +98,11 @@ const dtbUsers = [
     verified: true,
     followers: "1.2M",
     likes: "4.2M",
+    isLive: false,
+    live: {
+      title: "Hello World !",
+      viewers: 123,
+    }
   },
   {
     id: 8,
@@ -78,6 +113,11 @@ const dtbUsers = [
     verified: false,
     followers: "1.2M",
     likes: "4.2M",
+    isLive: true,
+    live: {
+      title: "Vào nói chuyện đi mọi người ",
+      viewers: 243,
+    }
   },
   {
     id: 9,
@@ -88,6 +128,11 @@ const dtbUsers = [
     verified: false,
     followers: "1.4M",
     likes: "64.3M",
+    isLive: true,
+    live: {
+      title: "hi mn",
+      viewers: 93,
+    }
   },
   {
     id: 10,
@@ -98,6 +143,11 @@ const dtbUsers = [
     verified: false,
     followers: "279.2K",
     likes: "2.7M",
+    isLive: false,
+    live: {
+      title: "Hello World !",
+      viewers: 123,
+    }
   },
   {
     id: 11,
@@ -108,6 +158,11 @@ const dtbUsers = [
     verified: false,
     followers: "312.2K",
     likes: "6.7M",
+    isLive: true,
+    live: {
+      title: "Bật nhạc theo yêu cầu",
+      viewers: 233,
+    }
   },
   {
     id: 12,
@@ -118,6 +173,11 @@ const dtbUsers = [
     verified: true,
     followers: "6.6M",
     likes: "104.7M",
+    isLive: true,
+    live: {
+      title: "Let chat ....",
+      viewers: 323,
+    }
   },
 ];
 

@@ -7,7 +7,6 @@ import styles from './VideoHeader.module.scss';
 
 
 function VideoHeader({ user, video }) {
-  console.log(user);
   return (
     <div className={clsx(styles.videoHeader)}>
 
