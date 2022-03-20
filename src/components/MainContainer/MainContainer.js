@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { Routes, Route, Navigate, HashRouter } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 
 import styles from './MainContainer.module.scss';
 import { ForYou } from '../index';
