@@ -25,8 +25,7 @@ function SideBarNav() {
   }, [url]);
   return (
     <div className={clsx(styles.sideBarNav)}>
-
-      <Link to="/" className={clsx(styles.link)}>
+      <Link to="/foryou" className={clsx(styles.link)}>
         <button
           className={clsx(styles.btn, {
             [styles.active]: active === "foryou"
